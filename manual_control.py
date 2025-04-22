@@ -49,6 +49,7 @@ sys.argv = ['']
 import glob
 import os
 import sys
+from pathlib import Path
 
 try:
     sys.path.append(glob.glob('**/carla-*%d.%d-%s.egg' % (
