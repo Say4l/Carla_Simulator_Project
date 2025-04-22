@@ -69,6 +69,7 @@ import carla
 
 from carla import ColorConverter as cc
 
+from ultralytics import YOLO
 import argparse
 import collections
 import datetime
@@ -714,6 +715,9 @@ class CameraManager(object):
 
 
 def game_loop(args):
+    base_path = Path ( __file__ ) . resolve ()
+    model_path = base_path . parent / " model " / " yolov8n .pt"
+    model = YOLO(str(model_path))
     pygame.init()
     pygame.font.init()
     world = None
@@ -739,27 +743,8 @@ def game_loop(args):
             world.render(display)
             pygame.display.flip()
 
-            base_path = Path ( __file__ ) . resolve ()
-            model_path = base_path . parent / " model " / " yolov8n .pt"
-            model = YOLO (str( model_path ) )
-            results = model ( source = " _out / % 08d .jpg " % world.frame_number , show = True , conf = 0.5 )
-            for result in results:
-                boxes = result.boxes
-                for box in boxes:
-                    xyxy = box.xyxy[0].cpu().numpy()
-                    conf = box.conf[0].cpu().numpy()
-                    cls = box.cls[0].cpu().numpy()
-                    print(f"Detected {cls} with confidence {conf} at {xyxy}")
             
-    except KeyboardInterrupt:
-        print('\nCancelled by user. Bye!')
-    except Exception as error:
-        logging.error(error)
-        if world is not None:
-            world.hud.notification('Error: %s' % str(error))
-            world.restart()
-        else:
-            logging.error('World is not initialized. Cannot restart.')
+            
 
     finally:
         if world is not None:
