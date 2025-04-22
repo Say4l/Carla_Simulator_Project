@@ -45,7 +45,7 @@ sys.argv = ['']
 # -- find carla module ---------------------------------------------------------
 # ==============================================================================
 
-
+import cv2
 import glob
 import os
 import sys
@@ -742,6 +742,16 @@ def game_loop(args):
             world.tick(clock)
             world.render(display)
             pygame.display.flip()
+            surface_to_draw = pygame.display.get_surface()
+            view = pygame.surfarray.array3d(surface_to_draw)
+            # Convert to OpenCV format
+            view = view.transpose((1, 0, 2))  # Change from (width, height, channels) to (height, width, channes)
+            # Convert to BGR format
+            # Display the image using OpenCV
+            view = cv2.cvtColor(view, cv2.COLOR_RGB2BGR)
+            result = model(view)
+            annotated_image = result[0].plot()
+            cv2.imshow("Carla View", annotated_image)
 
             
             
