@@ -716,7 +716,7 @@ class CameraManager(object):
 
 def game_loop(args):
     base_path = Path ( __file__ ) . resolve ()
-    model_path = base_path . parent / " model " / " yolov8n .pt"
+    model_path = base_path . parent/"model"/"yolov8l.pt"
     model = YOLO(str(model_path))
     pygame.init()
     pygame.font.init()
