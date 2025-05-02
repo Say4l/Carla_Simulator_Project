@@ -188,7 +188,12 @@ Carla_Simulator_Project/
 ├── scripts/                 **Python scripts for simulator control**
 ├── ge_practical_exercises.ipynb
 ├── README.md                **Markdown-based report**
+
 ---
+
+## Screenshot CARLA
+![Uploading Screenshot 2025-05-02 at 23.13.51.png…]()
+
 
 ## References
 (https://www.v7labs.com/blog/yolo-object-detection)
