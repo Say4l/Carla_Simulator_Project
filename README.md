@@ -14,11 +14,14 @@
   - Student ID: 20120733.
   - [Stefan Alexandru Popescu]
   - Student ID: 20148087.
+  - [Jörg Bernau]
+  - Student ID: 15411098.
   - **Instructors:**
   - [Prof. Rasche & J. Schweizer B.Sc.]
   - **:Presenting Instructors:**
   - [Jonas Schweizer],
   - [Sebastian Stabenau]
+  - 
 
 ---
 
