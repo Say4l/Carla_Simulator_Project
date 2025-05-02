@@ -192,7 +192,8 @@ Carla_Simulator_Project/
 ---
 
 ## Screenshot CARLA
-![Uploading Screenshot 2025-05-02 at 23.13.51.png…]()
+<img width="1800" alt="Screenshot 2025-05-02 at 23 13 51" src="https://github.com/user-attachments/assets/67f26bde-2fac-422b-a226-2924055eeaa7" />
+
 
 
 ## References
