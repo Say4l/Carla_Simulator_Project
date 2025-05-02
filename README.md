@@ -183,11 +183,11 @@ $ conda activate carla-sim
 $ python scripts/manual_control.py
 
 Carla_Simulator_Project/
-├── media/                  # Output images and recordings
-├── model/                  # YOLOv8 model files
-├── scripts/                # Python scripts for simulator control
+├── media/                   **Output images and recordings**
+├── model/                   **YOLOv8 model files**
+├── scripts/                 **Python scripts for simulator control**
 ├── ge_practical_exercises.ipynb
-├── README.md               # Markdown-based report
+├── README.md                **Markdown-based report**
 ---
 
 ## References
