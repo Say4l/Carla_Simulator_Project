@@ -174,12 +174,12 @@ Develop an end-to-end autonomous control loop.
 
 ## Appendix
 
-# Clone the project repository
+**Clone the project repository**
 $ git clone https://github.com/Say4l/Carla_Simulator_Project.git
 $ cd Carla_Simulator_Project
 $ conda activate carla-sim
 
-# Run simulator with detection overlay
+**Run simulator with detection overlay**
 $ python scripts/manual_control.py
 
 Carla_Simulator_Project/
