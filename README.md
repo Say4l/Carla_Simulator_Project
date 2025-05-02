@@ -69,7 +69,7 @@ Verify the CARLA environment using the default map (Town10).
 
 Download and test YOLOv8 models on static images.
 
-**:Task 2:** Jupyter Notebook Exploration
+ **:Task 2:** Jupyter Notebook Exploration
 
 Connect to CARLA simulator via Python API.
 
